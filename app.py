@@ -1,11 +1,12 @@
-import flask
+from flask import Flask
 
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+my_awesome_app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
-def home():
-    return "<p> Hello World </p>"
+@my_awesome_app.route('/')
+def hello_world():
+    return 'Hello World!'
 
-app.run()
+
+if __name__ == '__main__':
+    my_awesome_app.run()
