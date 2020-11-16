@@ -1,12 +1,11 @@
-from flask import Flask
+import flask
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def index():
-    return "<h1> Deployed to Heroku</h1>"
+app = flask.Flask(__name__)
+app.config["DEBUG"] = True
 
 
-if __name__ == "__main__":
-    app.run()
+@app.route('/', methods=['GET'])
+def home():
+    return "<p> Hello World </p>"
+
+app.run()
