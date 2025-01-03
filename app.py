@@ -5,7 +5,7 @@ app.config["DEBUG"] = True
 
 @app.route('/')
 def index():
-    return "<h1> Deployed to Heroku</h1>"
+    return "<h1> Deployed to Aws Amplify</h1>"
 
 
 if __name__ == "__main__":
